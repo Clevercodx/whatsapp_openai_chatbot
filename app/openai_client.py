@@ -8,14 +8,14 @@ class OpenAIClient:
 
     def complete(self, prompt):
         response = openai.Completion.create(
-        model="text-davinci-003",
-        prompt=prompt,
-        temperature=0.0,
-        max_tokens=256,
-        top_p=1,
-        frequency_penalty=0,
-        presence_penalty=0
-        )
+  model="text-davinci-002",
+  prompt="",
+  temperature=0,
+  max_tokens=1024,
+  top_p=1,
+  frequency_penalty=0,
+  presence_penalty=0
+)
 
         print ("response form openai is :\n" + str(response) + "\n")
         return response.choices[0].text
